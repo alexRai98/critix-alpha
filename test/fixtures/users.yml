@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unsername: MyString
+  email: MyString
+  brith_date: 2020-05-25
+  review_count: 1
+
+two:
+  unsername: MyString
+  email: MyString
+  brith_date: 2020-05-25
+  review_count: 1
