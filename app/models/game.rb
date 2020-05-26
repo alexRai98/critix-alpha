@@ -4,4 +4,6 @@ class Game < ApplicationRecord
 
     has_many :games
     belongs_to :parent,  :class_name => "Game"
+
+    has_many :reviews, :as => :reviewable
 end
