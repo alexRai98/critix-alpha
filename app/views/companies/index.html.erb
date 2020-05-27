@@ -12,7 +12,8 @@
         <tr>
           <td><%=company.name%> </td>
           <td><%=company.country%> </td>
-          <td><%= link_to  "show", company_path(company.id) %> </td>
+          <td><%= link_to  "show", company %> </td>
+          <td><%= link_to  "edit", edit_company_path(company) %> </td>
         </tr>
       <%end%>
     </tbody>
