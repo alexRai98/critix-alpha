@@ -1,0 +1,18 @@
+<h1>All Companies</h1>
+<table class="comany_table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <%@companies.each do |company|%>  
+            <td><%=company.name%> </td>
+            <td><%=company.country%> </td>
+            <td><%= link_to  "show", company_path(company.id) %> </td>
+        <%end%>
+      </tr>
+    </tbody>
+  </table>

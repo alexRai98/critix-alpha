@@ -16,8 +16,10 @@ class Game < ApplicationRecord
 
 
     def validate_parent_id_expansion_category
-        if expansion? && parent.nil?
-            errors.add(:game_id, "parent_id is required")
+        if expansion? 
+            if parent.nil?
+                errors.add(:parent, "parent_id is required")
+            end
         end
     end
 
