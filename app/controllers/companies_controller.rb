@@ -36,6 +36,9 @@ class CompaniesController < ApplicationController
 
   def destroy
 
+    company = Company.find(params[:id])
+    company.destroy
+    redirect_to companies_path
   end
 
   private
