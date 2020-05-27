@@ -1,4 +1,5 @@
 <h1>All Companies</h1>
+<%= link_to  "New Company", new_company_path %>
 <table class="comany_table">
     <thead>
       <tr>
@@ -7,12 +8,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <%@companies.each do |company|%>  
-            <td><%=company.name%> </td>
-            <td><%=company.country%> </td>
-            <td><%= link_to  "show", company_path(company.id) %> </td>
-        <%end%>
-      </tr>
+      <%@companies.each do |company|%>  
+        <tr>
+          <td><%=company.name%> </td>
+          <td><%=company.country%> </td>
+          <td><%= link_to  "show", company_path(company.id) %> </td>
+        </tr>
+      <%end%>
     </tbody>
   </table>
