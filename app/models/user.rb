@@ -2,6 +2,8 @@ class User < ApplicationRecord
     has_many :review
     before_create :init_review_count
 
+    has_secure_password
+
     validates :username, uniqueness: true, presence: true
     validates :email, uniqueness: true, presence: true
     validate :user_birth_date
